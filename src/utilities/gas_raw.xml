@@ -1,0 +1,409 @@
+<root count="45" created="11/08/2022" lastUpdated="11/04/2023" lastEntry="12/30/2022">
+  <row>
+    <RecordID>0</RecordID>
+    <DATE>10/11/22</DATE>
+    <GALLONS>14.295</GALLONS>
+    <MILEAGE>77584</MILEAGE>
+    <PRICE>58.02</PRICE>
+    <STATION>Mobil</STATION>
+    <NOTES />
+  </row>
+  <row>
+    <RecordID>1</RecordID>
+    <DATE>10/20/22</DATE>
+    <GALLONS>14.059</GALLONS>
+    <MILEAGE>77881</MILEAGE>
+    <PRICE>60.44</PRICE>
+    <STATION>????</STATION>
+    <NOTES />
+  </row>
+  <row>
+    <RecordID>2</RecordID>
+    <DATE>10/30/22</DATE>
+    <GALLONS>13.236</GALLONS>
+    <MILEAGE>78209</MILEAGE>
+    <PRICE>52.93</PRICE>
+    <STATION>BP</STATION>
+    <NOTES />
+  </row>
+  <row>
+    <RecordID>3</RecordID>
+    <DATE>11/08/22</DATE>
+    <GALLONS>14.709</GALLONS>
+    <MILEAGE>78568.8</MILEAGE>
+    <PRICE>63.23</PRICE>
+    <STATION>Mobil</STATION>
+    <NOTES />
+  </row>
+  <row>
+    <RecordID>4</RecordID>
+    <DATE>11/13/22</DATE>
+    <GALLONS>13.798</GALLONS>
+    <MILEAGE>78944.3</MILEAGE>
+    <PRICE>51.04</PRICE>
+    <STATION>Mobil</STATION>
+    <NOTES />
+  </row>
+  <row>
+    <RecordID>5</RecordID>
+    <DATE>11/22/22</DATE>
+    <GALLONS>13.941</GALLONS>
+    <MILEAGE>79271.5</MILEAGE>
+    <PRICE>52.40</PRICE>
+    <STATION>Shell</STATION>
+    <NOTES />
+  </row>
+  <row>
+    <RecordID>6</RecordID>
+    <DATE>12/04/22</DATE>
+    <GALLONS>14.176</GALLONS>
+    <MILEAGE>79600.1</MILEAGE>
+    <PRICE>53.15</PRICE>
+    <STATION>Mobil</STATION>
+    <NOTES />
+  </row>
+  <row>
+    <RecordID>7</RecordID>
+    <DATE>12/13/22</DATE>
+    <GALLONS>14.874</GALLONS>
+    <MILEAGE>79967</MILEAGE>
+    <PRICE>41.63</PRICE>
+    <STATION>Kroger</STATION>
+    <NOTES />
+  </row>
+  <row>
+    <RecordID>8</RecordID>
+    <DATE>12/24/22</DATE>
+    <GALLONS>14.546</GALLONS>
+    <MILEAGE>80291</MILEAGE>
+    <PRICE>45.08</PRICE>
+    <STATION>BP</STATION>
+    <NOTES />
+  </row>
+  <row>
+    <RecordID>9</RecordID>
+    <DATE>01/03/23</DATE>
+    <GALLONS>14.160</GALLONS>
+    <MILEAGE>80670.7</MILEAGE>
+    <PRICE>42.47</PRICE>
+    <STATION>Shell</STATION>
+    <NOTES />
+  </row>
+  <row>
+    <RecordID>10</RecordID>
+    <DATE>01/13/23</DATE>
+    <GALLONS>13.976</GALLONS>
+    <MILEAGE>80981.9</MILEAGE>
+    <PRICE>44.15</PRICE>
+    <STATION>Kroger</STATION>
+    <NOTES />
+  </row>
+  <row>
+    <RecordID>11</RecordID>
+    <DATE>01/19/23</DATE>
+    <GALLONS>15.221</GALLONS>
+    <MILEAGE>81401.0</MILEAGE>
+    <PRICE>50.21</PRICE>
+    <STATION>BP</STATION>
+    <NOTES />
+  </row>
+  <row>
+    <RecordID>12</RecordID>
+    <DATE>01/28/23</DATE>
+    <GALLONS>14.103</GALLONS>
+    <MILEAGE>81738.2</MILEAGE>
+    <PRICE>52.17</PRICE>
+    <STATION>Shell</STATION>
+    <NOTES />
+  </row>
+  <row>
+    <RecordID>13</RecordID>
+    <DATE>02/06/23</DATE>
+    <GALLONS>14.229</GALLONS>
+    <MILEAGE>82073.9</MILEAGE>
+    <PRICE>49.08</PRICE>
+    <STATION>Shell</STATION>
+    <NOTES />
+  </row>
+  <row>
+    <RecordID>14</RecordID>
+    <DATE>02/12/23</DATE>
+    <GALLONS>14.341</GALLONS>
+    <MILEAGE>82439.3</MILEAGE>
+    <PRICE>48.03</PRICE>
+    <STATION>BP</STATION>
+    <NOTES />
+  </row>
+  <row>
+    <RecordID>15</RecordID>
+    <DATE>02/19/23</DATE>
+    <GALLONS>14.988</GALLONS>
+    <MILEAGE>82817.5</MILEAGE>
+    <PRICE>45.85</PRICE>
+    <STATION>Shell</STATION>
+    <NOTES />
+  </row>
+  <row>
+    <RecordID>16</RecordID>
+    <DATE>03/03/23</DATE>
+    <GALLONS>13.923</GALLONS>
+    <MILEAGE>83131.9</MILEAGE>
+    <PRICE>45.93</PRICE>
+    <STATION>Shell</STATION>
+    <NOTES />
+  </row>
+  <row>
+    <RecordID>17</RecordID>
+    <DATE>03/10/23</DATE>
+    <GALLONS>14.402</GALLONS>
+    <MILEAGE>83485.2</MILEAGE>
+    <PRICE>49.82</PRICE>
+    <STATION>Shell</STATION>
+    <NOTES />
+  </row>
+  <row>
+    <RecordID>18</RecordID>
+    <DATE>03/17/23</DATE>
+    <GALLONS>14.372</GALLONS>
+    <MILEAGE>83822.9</MILEAGE>
+    <PRICE>55.32</PRICE>
+    <STATION>Mobil</STATION>
+    <NOTES />
+  </row>
+  <row>
+    <RecordID>19</RecordID>
+    <DATE>03/28/23</DATE>
+    <GALLONS>14.458</GALLONS>
+    <MILEAGE>84190.2</MILEAGE>
+    <PRICE>53.48</PRICE>
+    <STATION>Mobil</STATION>
+    <NOTES />
+  </row>
+  <row>
+    <RecordID>20</RecordID>
+    <DATE>04/05/23</DATE>
+    <GALLONS>14.268</GALLONS>
+    <MILEAGE>84554.7</MILEAGE>
+    <PRICE>48.50</PRICE>
+    <STATION>Kroger</STATION>
+    <NOTES />
+  </row>
+  <row>
+    <RecordID>21</RecordID>
+    <DATE>04/14/23</DATE>
+    <GALLONS>14.435</GALLONS>
+    <MILEAGE>84920.8</MILEAGE>
+    <PRICE>53.40</PRICE>
+    <STATION>Kroger</STATION>
+    <NOTES />
+  </row>
+  <row>
+    <RecordID>22</RecordID>
+    <DATE>04/24/23</DATE>
+    <GALLONS>14.843</GALLONS>
+    <MILEAGE>85283.8</MILEAGE>
+    <PRICE>53.42</PRICE>
+    <STATION>BP</STATION>
+    <NOTES />
+  </row>
+  <row>
+    <RecordID>23</RecordID>
+    <DATE>05/04/23</DATE>
+    <GALLONS>14.464</GALLONS>
+    <MILEAGE>85650.2</MILEAGE>
+    <PRICE>54.23</PRICE>
+    <STATION>Mobil</STATION>
+    <NOTES />
+  </row>
+  <row>
+    <RecordID>24</RecordID>
+    <DATE>05/12/23</DATE>
+    <GALLONS>14.632</GALLONS>
+    <MILEAGE>86009.3</MILEAGE>
+    <PRICE>48.27</PRICE>
+    <STATION>Exxon</STATION>
+    <NOTES />
+  </row>
+  <row>
+    <RecordID>25</RecordID>
+    <DATE>05/23/23</DATE>
+    <GALLONS>14.785</GALLONS>
+    <MILEAGE>86370.1</MILEAGE>
+    <PRICE>49.66</PRICE>
+    <STATION>Shell</STATION>
+    <NOTES />
+  </row>
+  <row>
+    <RecordID>26</RecordID>
+    <DATE>06/01/23</DATE>
+    <GALLONS>14.842</GALLONS>
+    <MILEAGE>86779.4</MILEAGE>
+    <PRICE>51.34</PRICE>
+    <STATION>Shell</STATION>
+    <NOTES />
+  </row>
+  <row>
+    <RecordID>27</RecordID>
+    <DATE>06/08/23</DATE>
+    <GALLONS>15.322</GALLONS>
+    <MILEAGE>87160.0</MILEAGE>
+    <PRICE>58.21</PRICE>
+    <STATION>BP</STATION>
+    <NOTES />
+  </row>
+  <row>
+    <RecordID>28</RecordID>
+    <DATE>06/16/23</DATE>
+    <GALLONS>14.337</GALLONS>
+    <MILEAGE>87565.9</MILEAGE>
+    <PRICE>54.47</PRICE>
+    <STATION>Mobil</STATION>
+    <NOTES />
+  </row>
+  <row>
+    <RecordID>29</RecordID>
+    <DATE>06/28/23</DATE>
+    <GALLONS>14.572</GALLONS>
+    <MILEAGE>87926.0</MILEAGE>
+    <PRICE>51.28</PRICE>
+    <STATION>BP</STATION>
+    <NOTES />
+  </row>
+  <row>
+    <RecordID>30</RecordID>
+    <DATE>07/08/23</DATE>
+    <GALLONS>14.881</GALLONS>
+    <MILEAGE>88353.2</MILEAGE>
+    <PRICE>50.58</PRICE>
+    <STATION>MARATHON</STATION>
+    <NOTES />
+  </row> 
+  <row>
+    <RecordID>31</RecordID>
+    <DATE>07/17/23</DATE>
+    <GALLONS>14.754</GALLONS>
+    <MILEAGE>88754.0</MILEAGE>
+    <PRICE>58.26</PRICE>
+    <STATION>Mobil</STATION>
+    <NOTES />
+  </row>  
+  <row>
+    <RecordID>32</RecordID>
+    <DATE>07/29/23</DATE>
+    <GALLONS>13.302</GALLONS>
+    <MILEAGE>89134.9</MILEAGE>
+    <PRICE>50.00</PRICE>
+    <STATION>7-11</STATION>
+    <NOTES />
+  </row>  
+  <row>
+    <RecordID>33</RecordID>
+    <DATE>07/31/23</DATE>
+    <GALLONS>2.345</GALLONS>
+    <MILEAGE>89156.9</MILEAGE>
+    <PRICE>8.11</PRICE>
+    <STATION>Mobil</STATION>
+    <NOTES />
+  </row> 
+  <row>
+    <RecordID>34</RecordID>
+    <DATE>08/10/23</DATE>
+    <GALLONS>15.118</GALLONS>
+    <MILEAGE>89524.2</MILEAGE>
+    <PRICE>61.97</PRICE>
+    <STATION>Exxon</STATION>
+    <NOTES />
+  </row> 
+  <row>
+    <RecordID>35</RecordID>
+    <DATE>08/21/23</DATE>
+    <GALLONS>12.824</GALLONS>
+    <MILEAGE>89933.7</MILEAGE>
+    <PRICE>50.00</PRICE>
+    <STATION>Shell</STATION>
+    <NOTES />
+  </row> 
+  <row>
+    <RecordID>36</RecordID>
+    <DATE>08/21/23</DATE>
+    <GALLONS>2.759</GALLONS>
+    <MILEAGE>89942.3</MILEAGE>
+    <PRICE>11.17</PRICE>
+    <STATION>Mobil</STATION>
+    <NOTES />
+  </row> 
+  <row>
+    <RecordID>37</RecordID>
+    <DATE>09/02/23</DATE>
+    <GALLONS>15.184</GALLONS>
+    <MILEAGE>90332.9</MILEAGE>
+    <PRICE>57.68</PRICE>
+    <STATION>BP</STATION>
+    <NOTES />
+  </row>   
+  <row>
+    <RecordID>38</RecordID>
+    <DATE>09/03/23</DATE>
+    <GALLONS>13.699</GALLONS>
+    <MILEAGE>90707.25</MILEAGE>
+    <PRICE>61.36</PRICE>
+    <STATION>Speedway</STATION>
+    <NOTES>estimated mileage</NOTES>
+  </row>  
+  <row>
+    <RecordID>39</RecordID>
+    <DATE>09/23/23</DATE>
+    <GALLONS>15.141</GALLONS>
+    <MILEAGE>91081.6</MILEAGE>
+    <PRICE>57.52</PRICE>
+    <STATION>Sunoco</STATION>
+    <NOTES />
+  </row>  
+  <row>
+    <RecordID>40</RecordID>
+    <DATE>10/02/23</DATE>
+    <GALLONS>14.468</GALLONS>
+    <MILEAGE>91475.4</MILEAGE>
+    <PRICE>56.41</PRICE>
+    <STATION>BP</STATION>
+    <NOTES />
+  </row> 
+  <row>
+    <RecordID>41</RecordID>
+    
+     
+<DATE>10/08/23</DATE>
+    <GALLONS>15</GALLONS>
+    <MILEAGE>91853.8</MILEAGE>
+    <PRICE>53.14</PRICE>
+    <STATION>Marathon</STATION>
+    <NOTES>estimated gallons</NOTES>
+  </row> 
+  <row>
+    <RecordID>42</RecordID>
+    <DATE>10/17/23</DATE>
+    <GALLONS>15.020</GALLONS>
+    <MILEAGE>92199.7</MILEAGE>
+    <PRICE>54.06</PRICE>
+    <STATION>Shell</STATION>
+    <NOTES />
+  </row> 
+  <row>
+    <RecordID>43</RecordID>
+    <DATE>10/22/23</DATE>
+    <GALLONS>14.392</GALLONS>
+    <MILEAGE>92577.4</MILEAGE>
+    <PRICE>47.48</PRICE>
+    <STATION>Shell</STATION>
+    <NOTES />
+  </row> 
+  <row>
+    <RecordID>44</RecordID> 
+    <DATE>10/29/23</DATE>
+    <GALLONS>15.433</GALLONS>
+    <MILEAGE>92942.9</MILEAGE>
+    <PRICE>54.77</PRICE>
+    <STATION>Speedway</STATION>
+    <NOTES />
+  </row> 
+</root>
