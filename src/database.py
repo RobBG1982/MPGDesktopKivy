@@ -3,7 +3,7 @@
  Module:  database.py
  
  Description: 
- This module defines the database for the Gas DEsktop Application.
+ This module defines the database for the Gas Desktop Application.
 The database schema is
 
 Gas Fillup Entry 
@@ -36,13 +36,16 @@ class EntryTags(IntEnum):
 
 class DataBase:
     def __init__(self, filename):
-        print("Hello Database")
         self.filename = filename
         self.Entries = []
         self.import_xml(filename)
         self.save_xml_to_list()
+        self.print_entries()
 
 
+    def get_size (self):
+        return  len(self.Entries) 
+         
 
     def import_xml (self, xmlfile):
 
@@ -66,22 +69,12 @@ class DataBase:
                 row.append(elements.text)
             self.Entries.append(row)
 
-        
-       # for x in range(45):
-       #     print (f' New row {self.Entries[x][3]} \n\n')
 
-
-        #for entry in entries:
-        #    print (f' New row {entry} \n\n')
-
-
-
-    def add_entry (self, date, gallons, mileage, station, notes):
+    def add_entry (self, date, gallons, mileage, cost, station, notes):
             
         newID = self.get_new_RecordID
-        row  = [newID, date, gallons, mileage, station, notes]
+        row  = [newID, date, gallons, mileage, cost, station, notes]
         self.Entries.append(row)
-
 
 
     def print_entries(self):
@@ -111,56 +104,10 @@ class DataBase:
         return str(datetime.datetime.now()).split(" ")[0]
 
 
-
 '''
 
-    def get_entry_by_price(self, price1, op, price2=0):
-        
-        for row in root.findall("./row/PRICE"):
-            price = float(row.find('PRICE').text)
-            if op == "less":
-
-            elif op == "more":
-
-            elif op == "between":
-        
-
-
-   def save_xml (self, xmlfile):
-
-        self.tree = ET.parse(xmlfile) 
-    
-        # get root element 
-        root = self.tree.getroot() 
-    
-        
-        # Add a RecordID to all entry rows 
-        newID = 0
-        rowRootTag = ET.Element("RecordID")
-
-        for child in root: 
-            newChildTag = ET.SubElement(rowRootTag, "RecordID")
-            newChildTag.text = str(newID)   
-            child.insert(0, newChildTag) 
-
-            newID+=1
-
-        self.tree.write("gas_raw1.xml", encoding="utf-8")  
-
-        
-
-    
-    def get_entry_by_price(self, price, op):
-        if email in self.users:
-            return self.users[email]
-        else:
-            return -1
-
-
-    def get_entry_by_station(self, station, op):
-        return -1
-
-
-    
+if __name__=="__main__":
+    db = DataBase("utilities/gas_raw.xml")
+    db.print_entries()
         
 '''

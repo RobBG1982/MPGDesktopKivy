@@ -7,10 +7,9 @@
 
 
  Name          Date     Issue   
- R. Gaisey   11/1/23
+ R. Gaisey   11/12/23
 
  '''
-
 
 
 
@@ -20,10 +19,12 @@ from kivy.uix.screenmanager import ScreenManager, Screen
 from kivy.uix.relativelayout import RelativeLayout
 from kivy.uix.label import Label
 from kivy.uix.widget import Widget
+from kivy.uix.button import Button
 from database import EntryTags as tags
 from kivy.properties import ObjectProperty
 from database import DataBase
-
+from displayValues import displayValues 
+import utilities.displayMath as util
 
 
 
@@ -42,13 +43,41 @@ class SummaryWindow(Screen):
     recent_cpm     = ObjectProperty(None)
     recent_cpg     = ObjectProperty(None)
 
+
+    new_date    = ObjectProperty(None)
+    new_mileage = ObjectProperty(None)
+    new_cost    = ObjectProperty(None)
+    new_gallons = ObjectProperty(None)
+    new_station = ObjectProperty(None)
+    new_notes   = ObjectProperty(None)
+
+            
+    dv = displayValues()
+
+    
     def on_enter(self, *args):
-        self.overall_mileage.text = db.Entries[4][tags.MILEAGE]
-        self.overall_mpg.text = str(float(db.Entries[4][tags.MILEAGE])/float(db.Entries[4][tags.GALLONS]))
-        self.overall_cpm.text = str(float(db.Entries[4][tags.PRICE])/float(db.Entries[4][tags.MILEAGE]))
-        self.overall_cpg.text = str(float(db.Entries[4][tags.PRICE])/float(db.Entries[4][tags.GALLONS]))
+        self.update_display()
+        
         return super().on_enter(*args)
     
+
+    def update_display(self):
+
+        self.overall_mileage.text = util.format_float(self.dv.get_overall_mileage(), 2)
+        self.overall_mpg.text     = util.format_float(self.dv.get_overall_mpg(), 2)
+        self.overall_cpm.text     = f'${util.format_float(self.dv.get_overall_cpm(), 2)}'
+        self.overall_cpg.text     = f'${util.format_float(self.dv.get_overall_cpg(), 2)}'
+
+        self.recent_mileage.text = util.format_float(self.dv.get_recent_mileage(), 2)
+        self.recent_mpg.text     = util.format_float(self.dv.get_recent_mpg(), 2)
+        self.recent_cpm.text     = f'${util.format_float(self.dv.get_recent_cpm(), 2)}'
+        self.recent_cpg.text     = f'${util.format_float(self.dv.get_recent_cpg(), 2)}'
+        
+        return
+        
+
+
+
 
 
 
@@ -61,6 +90,7 @@ class TopLayout(RelativeLayout):
 	pass
     
 class BasicApp(App):
+
     def build(self):
         return sm
 
