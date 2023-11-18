@@ -15,8 +15,9 @@ Gas Fillup Entry
    [5] Station:  <<text>>
    [6] Notes:    <<text>> 
  
- Name          Date     Issue   
- R. Gaisey   11/1/23
+ Name          Date       Issue   
+ R. Gaisey   11/01/23   initial commit
+ R. Gaisey   11/18/23   file save function
 
  '''
 
@@ -38,36 +39,34 @@ class DataBase:
     def __init__(self, filename):
         self.filename = filename
         self.Entries = []
-        self.import_xml(filename)
-        self.save_xml_to_list()
-        self.print_entries()
+        self.backupFile = "liveBackup.xml"
+
+        self.save_xml_to_list(filename)
+        self.save_tree_to_file()
+        #self.print_entries()
 
 
     def get_size (self):
         return  len(self.Entries) 
          
 
-    def import_xml (self, xmlfile):
+    def save_xml_to_list (self, xmlfile):
 
         self.tree = ET.parse(xmlfile) 
-        self.tree.write("gas_raw1.xml", encoding="utf-8")  
-
-
-
-    def save_xml_to_list (self):
 
         # get root element 
         root = self.tree.getroot() 
-    
-        entries = []
-        row  = []
 
         for child in root: 
-            row  = []
 
+            row  = []
             for elements in child:
                 row.append(elements.text)
             self.Entries.append(row)
+
+
+    def save_tree_to_file (self):
+        self.tree.write(self.backupFile, encoding="utf-8")  
 
 
     def add_entry (self, date, gallons, mileage, cost, station, notes):

@@ -9,19 +9,22 @@
   - cost per mile
   - total mileage
  
- Name          Date     Issue   
- R. Gaisey   11/12/23
-
+ Name          Date          Issue   
+ R. Gaisey   11/12/23    initial commit 
+ R. Gaisey   11/18/23    added logging
  '''
 
 
 from database import EntryTags as tags
 from database import DataBase
+import logging
 
+logger = logging.getLogger()
 
 class displayValues():
 
   def __init__(self):
+    logger.info("Initializing database")
 
     self.db = DataBase("utilities/gas_raw.xml")
     self.db.print_entries()
@@ -38,10 +41,12 @@ class displayValues():
 
 
   def set_to_stale(self):
+    logger.debug("Data is stale")
     self.stale = True
     return
   
   def set_all_values(self):
+    logger.debug("Setting all values")
     self.set_overall_values()
     self.set_recent_values()
     self.stale = False
@@ -50,6 +55,8 @@ class displayValues():
 
 
   def set_overall_values(self):
+    logger.info("Setting 'overall' values")
+
     sum_price   = 0 
     sum_gallons = 0
     max_index = self.db.get_size() -1
@@ -65,6 +72,8 @@ class displayValues():
 
 
   def set_recent_values(self):
+    logger.info("Setting 'overall' values")
+
     sum_price   = 0 
     sum_gallons = 0
     max_index = self.db.get_size() -1
@@ -93,6 +102,8 @@ class displayValues():
     try:
       return self.overall_mileage/self.overall_gallons 
     except ZeroDivisionError:
+
+      logger.exception("Exception occured during 'overall' MPG calculation")
       return -1
 
 
@@ -103,6 +114,7 @@ class displayValues():
     try:
       return self.overall_cost/self.overall_mileage 
     except ZeroDivisionError:
+      logger.exception("Exception occured during 'overall' CPM calculation")
       return -1
 
 
@@ -113,6 +125,7 @@ class displayValues():
     try:
       return self.overall_cost/self.overall_gallons 
     except ZeroDivisionError:
+      logger.exception("Exception occured during 'overall' CPG calculation")
       return -1
     
 
@@ -131,6 +144,7 @@ class displayValues():
     try:
       return self.recent_mileage/self.recent_gallons 
     except ZeroDivisionError:
+      logger.exception("Exception occured during 'recent' MPG calculation")
       return -1
 
 
@@ -141,6 +155,7 @@ class displayValues():
     try:
       return self.recent_cost/self.recent_mileage 
     except ZeroDivisionError:
+      logger.exception("Exception occured during 'recent' CPM calculation")
       return -1
 
 
@@ -151,4 +166,5 @@ class displayValues():
     try:
       return self.recent_cost/self.recent_gallons 
     except ZeroDivisionError:
+      logger.exception("Exception occured during 'recent' CPG calculation")
       return -1

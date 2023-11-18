@@ -3,16 +3,14 @@
  Module:  gasMain.py
  
  Description: 
- This is the entry point for the Gas Desktop Aplication  
+ This is the entry point for the Gas Desktop Application  
 
 
- Name          Date     Issue   
- R. Gaisey   11/12/23
+ Name          Date         Issue   
+ R. Gaisey   11/12/23    initial commits 
+ R. Gaisey   11/18/23    added logging
 
  '''
-
-
-
 from kivy.app import App
 from kivy.lang import Builder
 from kivy.uix.screenmanager import ScreenManager, Screen
@@ -25,8 +23,14 @@ from kivy.properties import ObjectProperty
 from database import DataBase
 from displayValues import displayValues 
 import utilities.displayMath as util
+import logging
+import logging.config
 
 
+logging.config.fileConfig("logging.conf")
+logger = logging.getLogger()
+
+rawValues_filename = "utilities/gas_raw.xml"
 
 class CustomWindow(Screen):
     pass
@@ -62,6 +66,7 @@ class SummaryWindow(Screen):
     
 
     def update_display(self):
+        logger.info("Updating Display values")
 
         self.overall_mileage.text = util.format_float(self.dv.get_overall_mileage(), 2)
         self.overall_mpg.text     = util.format_float(self.dv.get_overall_mpg(), 2)
@@ -72,14 +77,8 @@ class SummaryWindow(Screen):
         self.recent_mpg.text     = util.format_float(self.dv.get_recent_mpg(), 2)
         self.recent_cpm.text     = f'${util.format_float(self.dv.get_recent_cpm(), 2)}'
         self.recent_cpg.text     = f'${util.format_float(self.dv.get_recent_cpg(), 2)}'
-        
+
         return
-        
-
-
-
-
-
 
 
 class WindowManager(ScreenManager):
@@ -90,6 +89,7 @@ class TopLayout(RelativeLayout):
 	pass
     
 class BasicApp(App):
+    logger.info("Starting MPG Desktop Aplication")
 
     def build(self):
         return sm
@@ -98,8 +98,7 @@ class BasicApp(App):
 kv = Builder.load_file('topLayout.kv')
 
 sm = WindowManager()
-db = DataBase("utilities/gas_raw.xml")
-db.print_entries()
+
 
 screens = [CustomWindow(name="custom"), SummaryWindow(name="summary")]
 for screen in screens:
