@@ -9,18 +9,13 @@
  Name          Date         Issue   
  R. Gaisey   11/12/23    initial commits 
  R. Gaisey   11/18/23    added logging
+ R. Gaisey   11/19/23    add entry MVP
 
  '''
 from kivy.app import App
 from kivy.lang import Builder
 from kivy.uix.screenmanager import ScreenManager, Screen
 from kivy.uix.relativelayout import RelativeLayout
-from kivy.uix.label import Label
-from kivy.uix.widget import Widget
-from kivy.uix.button import Button
-from database import EntryTags as tags
-from kivy.properties import ObjectProperty
-from database import DataBase
 from displayValues import displayValues 
 import utilities.displayMath as util
 import logging
@@ -37,25 +32,7 @@ class CustomWindow(Screen):
 
 
 class SummaryWindow(Screen):
-    overall_mileage = ObjectProperty(None)
-    overall_mpg     = ObjectProperty(None)
-    overall_cpm     = ObjectProperty(None)
-    overall_cpg     = ObjectProperty(None)
-
-    recent_mileage = ObjectProperty(None)
-    recent_mpg     = ObjectProperty(None)
-    recent_cpm     = ObjectProperty(None)
-    recent_cpg     = ObjectProperty(None)
-
-
-    new_date    = ObjectProperty(None)
-    new_mileage = ObjectProperty(None)
-    new_cost    = ObjectProperty(None)
-    new_gallons = ObjectProperty(None)
-    new_station = ObjectProperty(None)
-    new_notes   = ObjectProperty(None)
-
-            
+         
     dv = displayValues()
 
     
@@ -67,6 +44,7 @@ class SummaryWindow(Screen):
 
     def update_display(self):
         logger.info("Updating Display values")
+        logger.debug(self)
 
         self.overall_mileage.text = util.format_float(self.dv.get_overall_mileage(), 2)
         self.overall_mpg.text     = util.format_float(self.dv.get_overall_mpg(), 2)
@@ -79,6 +57,25 @@ class SummaryWindow(Screen):
         self.recent_cpg.text     = f'${util.format_float(self.dv.get_recent_cpg(), 2)}'
 
         return
+   
+    def addnewentry(self):
+        logger.info("Adding new entry")
+        logger.debug(self)
+
+        self.dv.db.add_entry(self.new_date.text, self.new_gallons.text, self.new_mileage.text, \
+                             self.new_cost.text, self.new_station.text, self.new_notes.text )
+        self.updatevalues()
+
+        logger.debug("End of newEntry")
+
+
+    def updatevalues(self):
+        logger.info("Forced update")
+        logger.debug(self)
+        self.dv.set_to_stale()
+        self.update_display()
+
+
 
 
 class WindowManager(ScreenManager):

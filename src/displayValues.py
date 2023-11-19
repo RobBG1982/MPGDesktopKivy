@@ -41,7 +41,7 @@ class displayValues():
 
 
   def set_to_stale(self):
-    logger.debug("Data is stale")
+    logger.debug("Data set to stale")
     self.stale = True
     return
   
@@ -72,7 +72,7 @@ class displayValues():
 
 
   def set_recent_values(self):
-    logger.info("Setting 'overall' values")
+    logger.info("Setting 'recent' values")
 
     sum_price   = 0 
     sum_gallons = 0
@@ -80,7 +80,7 @@ class displayValues():
 
     self.recent_mileage = float(self.db.Entries[max_index][tags.MILEAGE]) - float(self.db.Entries[max_index-10][tags.MILEAGE])
     for x in range(max_index-10, max_index):
-      sum_price   += float(self.db.Entries[x][tags.PRICE])    
+      sum_price   += float(self.db.Entries[x][tags.PRICE])   
       sum_gallons += float(self.db.Entries[x][tags.GALLONS])
 
     self.recent_cost = sum_price
@@ -102,7 +102,6 @@ class displayValues():
     try:
       return self.overall_mileage/self.overall_gallons 
     except ZeroDivisionError:
-
       logger.exception("Exception occured during 'overall' MPG calculation")
       return -1
 

@@ -12,6 +12,16 @@
 	recent_cpm: recent_cpm
 	recent_cpg: recent_cpg
 
+	new_date: new_date
+	new_gallons: new_gallons
+	new_mileage: new_mileage
+	new_cost: new_cost
+	new_station: new_station
+	new_notes: new_notes
+	
+	newentry_button:  newentry_button
+	update_button: update_button 
+
      
 	BoxLayout:
 		orientation:'vertical' 
@@ -185,8 +195,8 @@
             pos_hint: {'right': 1}
 
 			Button:
-			    id: newEntry_Button
-				on_press: self.addNewEntry()
+			    id: newentry_button
+				on_press: root.addnewentry()
 				text: "  Add New Entry  "
 				size_hint_x: None
 				size: self.texture_size
@@ -195,7 +205,7 @@
 
 			Button:
 			    id: update_button
-				on_press: self.updateValues()
+				on_press: root.updatevalues()
 				text: "  Update  "
 				size_hint_x: None
 				size: self.texture_size
