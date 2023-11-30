@@ -36,21 +36,48 @@ class EntryTags(IntEnum):
    NOTES    = 6
 
 class DataBase:
+
     def __init__(self, filename):
+        '''
+        Initializer function
+        
+        Parameters:
+           filename(text): filename of gas values source 
+        Returns:None
+        '''
+
         self.filename = filename
         self.Entries = []
         self.backupFile = "liveBackup.xml"
 
         self.save_xml_to_list(filename)
-        self.save_tree_to_file()
+        self.save_tree_to_file(False)
         #self.print_entries()
 
 
     def get_size (self):
+        '''
+        Returns the nummber of entries in the database
+        
+        Parameters:
+           None
+        Returns:
+         length(int) - the number of elements in the database
+        '''
         return  len(self.Entries) 
          
 
     def save_xml_to_list (self, xmlfile):
+        '''
+        Converts an xml file into a single array
+        Each array entry is a 1st level child element of the xml root
+        Each entry will contain all of the children of that 1st level child
+      
+        Parameters:
+           xmlfile(string) - filename of the source xml file
+        Returns:
+           None
+        '''
 
         self.tree = ET.parse(xmlfile) 
 
@@ -65,11 +92,34 @@ class DataBase:
             self.Entries.append(row)
 
 
-    def save_tree_to_file (self):
-        self.tree.write(self.backupFile, encoding="utf-8")  
+    def save_tree_to_file (self, replace):
+        '''
+        Saves an xml tree object to an .xml file
+      
+        Parameters:
+           replace (bool) - If this is true, also replaces the source file with 
+           the backup file created 
+        Returns:
+           None
+        '''
+
+        self.tree.write(self.backupFile, encoding="utf-8") 
+
+        if replace:
+            self.tree.write(self.filename, encoding="utf-8") 
+            
+
 
 
     def add_entry (self, date, gallons, mileage, cost, station, notes):
+        '''
+        Add a gas mileage entry into the database
+      
+        Parameters:
+           date,gallons, mileage, cost, station, notes  - entry data 
+        Returns:
+           None
+        '''
             
         newID = self.get_new_RecordID
         row  = [newID, date, gallons, mileage, cost, station, notes]
@@ -77,7 +127,15 @@ class DataBase:
 
 
     def print_entries(self):
-        # iterate news items 
+        '''
+        Prints all entries in the database
+      
+        Parameters:
+           None
+        Returns:
+           None
+        '''
+        
         root = self.tree.getroot() 
         for child in root: 
             for elements in child:
@@ -87,6 +145,15 @@ class DataBase:
 
 
     def get_new_RecordID(self):
+        '''
+        gets a new recordID for a new entry
+      
+        Parameters:
+           None
+        Returns:
+           None
+        '''
+
         root = self.tree.getroot() 
 
         maxRecordID = 0

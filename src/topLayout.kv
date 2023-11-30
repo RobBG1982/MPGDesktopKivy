@@ -1,4 +1,6 @@
 #:kivy 2.1.0
+#:import colors utilities.cmn_values.Common_Colors
+#:import cmn_str utilities.cmn_values.Common_Strings
 <SummaryWindow>
     name: "summary"
 	overall_mileage: overall_mileage
@@ -22,32 +24,37 @@
 	newentry_button:  newentry_button
 	update_button: update_button 
 
+	canvas.before:
+	    Color: 
+            rgba: colors.gray_bg
+	    Rectangle:
+		    pos: self.pos
+		    size: self.size	
      
 	BoxLayout:
 		orientation:'vertical' 
-		
+    	color: 
 
         # --- App Title --- #   
 		Label:
-			text: "MPG Summary:"
-			background_color: 1, 1, 1, 1
+			text: cmn_str.label_title
+			font_size: 36
+			color: colors.pink_title
             background_normal: ""
-		    canvas.before:
-                Color:
-                    rgba: 0, 1, 0, 0.5
-                Line:    # --- adds a border --- #
-                    width: 2
-                    rectangle: self.x, self.y, self.width, self.height
+			bold: "True"
 
    
         # --- Overall MPG Label and Values --- #   
 
 		Label:
-			text: "Overall Gas Mileage:"
+			text: cmn_str.label_overall
+			font_size: 24
+			color: colors.black
+			bold: "True"
             size_hint_x: None
             size: self.texture_size
-            pos_hint: {'right': 0.2}
-			background_color: 1, 0, 0, 1
+            pos_hint: {'right': 0.3}
+			
 
 
 		BoxLayout:
@@ -55,20 +62,23 @@
             pos_hint: {'right': 1}
 
 			Label:
-				text: "Total Miles: "
-				font_size: (root.width**2 + root.height**2) / 15**4
-                background_color: 0, 0, 0, 1
+				text: cmn_str.label_miles
+			    color: colors.black
+				font_size: (root.width**2 + root.height**2) /15**4
 
 			Label:
-				text: "MPG:"
-				font_size: (root.width**2 + root.height**2) / 15**4
+				text: cmn_str.label_mpg
+			    color: colors.black
+				font_size: (root.width**2 + root.height**2) /15**4
 
 			Label:
-				text: "Cost Per Mile:"
-				font_size: (root.width**2 + root.height**2) / 15**4
+				text: cmn_str.label_cpm
+			    color: colors.black
+				font_size: (root.width**2 + root.height**2) /15**4
 
 			Label:
-				text: "Cost Per Gallon:"
+				text: cmn_str.label_cpg
+			    color: colors.black
 				font_size: (root.width**2 + root.height**2) / 15**4
 
 
@@ -78,34 +88,45 @@
 
 			Label:
 			    id: overall_mileage
-				text: "99,999.9"
+				text: cmn_str.label_num_ex4
+			    color: colors.black
 				font_size: (root.width**2 + root.height**2) / 15**4
-                background_color: 0, 0, 0, 1
+				bold: "True"
 
 			Label:
 			    id: overall_mpg
-				text: "99.99"
+				text: cmn_str.label_num_ex3
+			    color: colors.black
 				font_size: (root.width**2 + root.height**2) / 15**4
+				bold: "True"
 
 			Label:
 			    id: overall_cpm
-				text: "99.99"
+				text: cmn_str.label_num_ex3
+			    color: colors.black
 				font_size: (root.width**2 + root.height**2) / 15**4
+				bold: "True"
 
 			Label:
 			    id: overall_cpg
-				text: "99.99"
+				text: cmn_str.label_num_ex3
+			    color: colors.black
 				font_size: (root.width**2 + root.height**2) / 15**4
+				bold: "True"
 
 
-        # --- Recent MPG Label and Values --- #   
+        # -------------------------------
+		#  Recent MPG Label and Values  
+		# ------------------------------ 
 
 		Label:
-			text: "Recent Gas Mileage:"
+			text: cmn_str.label_recent
+			font_size: 24
+			color: colors.black
+			bold: "True"
             size_hint_x: None
             size: self.texture_size
-            pos_hint: {'right': 0.2}
-			background_color: 0, 0, 1, 1
+            pos_hint: {'right': 0.3}
 
 
 		BoxLayout:
@@ -114,19 +135,23 @@
 
 
 			Label:
-				text: "Total Miles: "
+				text: cmn_str.label_miles
+			    color: colors.black
 				font_size: (root.width**2 + root.height**2) / 15**4
 
 			Label:
-				text: "MPG:"
+				text: cmn_str.label_mpg
+			    color: colors.black
 				font_size: (root.width**2 + root.height**2) / 15**4
 
 			Label:
-				text: "Cost Per Mile:"
+				text: cmn_str.label_cpm
+			    color: colors.black
 				font_size: (root.width**2 + root.height**2) / 15**4
 
 			Label:
-				text: "Cost Per Gallon:"
+				text: cmn_str.label_cpg
+			    color: colors.black
 				font_size: (root.width**2 + root.height**2) / 15**4
 
 			
@@ -136,79 +161,122 @@
 
 			Label:
 			    id: recent_mileage
-				text: "99,999.9"
+				text: cmn_str.label_num_ex4
+			    color: colors.black
 				font_size: (root.width**2 + root.height**2) / 15**4
-                background_color: 0, 0, 0, 1
+				bold: "True"
 
 			Label:
 			    id: recent_mpg
-				text: "99.99"
+				text: cmn_str.label_num_ex3
+			    color: colors.black
 				font_size: (root.width**2 + root.height**2) / 15**4
+				bold: "True"
 
 			Label:
 			    id: recent_cpm
-				text: "99.99"
+				text: cmn_str.label_num_ex3
+			    color: colors.black
 				font_size: (root.width**2 + root.height**2) / 15**4
+				bold: "True"
 
 			Label:
 			    id: recent_cpg
-				text: "99.99"
+				text: cmn_str.label_num_ex3
+			    color: colors.black
 				font_size: (root.width**2 + root.height**2) / 15**4
+				bold: "True"
 
 		 
-        # --- Text Entry Boxes --- #   
+        # -------------------------------
+		#  New Entry   
+		# ------------------------------ 
 
 			
 		GridLayout:
-			cols: 3
+			cols: 6
 			rows: 2 
             pos_hint: {'right': 1}
+			padding: 0, 5, 20, 0
+
+			Label:
+				text: cmn_str.label_date_entry
+			    color: colors.black
+				font_size: (root.width**2 + root.height**2) / 15**4
 
 			TextInput:
 			    id: new_date
-				text: "date"
+				text: cmn_str.label_date_ex
+
+			Label:
+				text: cmn_str.label_miles_entry
+			    color: colors.black
+				font_size: (root.width**2 + root.height**2) / 15**4
 
 			TextInput:
 			    id: new_mileage
-				text: " mileage"
+				text: cmn_str.label_num_ex2
+			    color: colors.black
+
+			Label:
+				text: cmn_str.label_gallons_entry
+			    color: colors.black
+				font_size: (root.width**2 + root.height**2) / 15**4
 
 			TextInput:
 			    id: new_gallons
-				text: "# gallons"
+				text: cmn_str.label_num_ex1
+			    color: colors.black
+
+			Label:
+				text: cmn_str.label_price_entry
+			    color: colors.black
+				font_size: (root.width**2 + root.height**2) / 15**4
 
 			TextInput:
 			    id: new_cost
-				text: "price"
+				text: cmn_str.label_num_ex1
+			    color: colors.black
+
+			Label:
+				text: cmn_str.label_station_entry
+			    color: colors.black
+				font_size: (root.width**2 + root.height**2) / 15**4
 
 			TextInput:
 			    id: new_station
-				text: "station"
-				
+				text: cmn_str.label_station_ex
+			    color: colors.black
+
+			Label:
+				text: cmn_str.label_notes_entry
+			    color: colors.black
+				font_size: (root.width**2 + root.height**2) / 15**4				
 			
 			TextInput:
 			    id: new_notes
-				text: "notes"
+				text: cmn_str.label_notes_ex
+			    color: colors.black
 				
 
 		FloatLayout:
 			orientation:'horizontal' 
             pos_hint: {'right': 1}
+			padding: 0, 100, 20, 0
 
 			Button:
 			    id: newentry_button
 				on_press: root.addnewentry()
-				text: "  Add New Entry  "
-				size_hint_x: None
-				size: self.texture_size
-                pos_hint: {'right': 0.2}
-				background_color: 0.5, 0.5, 1, 1
+				text: cmn_str.btn_newentry_text
+				size_hint: (0.2, 0.7)
+                pos_hint: {'x':.3, 'y':.1}
+				background_color: colors.blue_btn
 
 			Button:
 			    id: update_button
 				on_press: root.updatevalues()
-				text: "  Update  "
-				size_hint_x: None
-				size: self.texture_size
-                pos_hint: {'right': 0.6}
-				background_color: 0.5, 0.5, 1, 1
+				text: cmn_str.btn_update_text
+				size_hint: (0.2, 0.7)
+                pos_hint: {'x':.6, 'y':.1}
+				background_color: colors.blue_btn
 	

@@ -15,17 +15,15 @@
 from kivy.app import App
 from kivy.lang import Builder
 from kivy.uix.screenmanager import ScreenManager, Screen
-from kivy.uix.relativelayout import RelativeLayout
 from displayValues import displayValues 
-import utilities.displayMath as util
+import utilities.cmn_functions as util
 import logging
 import logging.config
-
+from datetime import datetime
 
 logging.config.fileConfig("logging.conf")
 logger = logging.getLogger()
 
-rawValues_filename = "utilities/gas_raw.xml"
 
 class CustomWindow(Screen):
     pass
@@ -40,11 +38,10 @@ class SummaryWindow(Screen):
         self.update_display()
         
         return super().on_enter(*args)
-    
+   
 
     def update_display(self):
         logger.info("Updating Display values")
-        logger.debug(self)
 
         self.overall_mileage.text = util.format_float(self.dv.get_overall_mileage(), 2)
         self.overall_mpg.text     = util.format_float(self.dv.get_overall_mpg(), 2)
@@ -60,30 +57,44 @@ class SummaryWindow(Screen):
    
     def addnewentry(self):
         logger.info("Adding new entry")
-        logger.debug(self)
 
-        self.dv.db.add_entry(self.new_date.text, self.new_gallons.text, self.new_mileage.text, \
-                             self.new_cost.text, self.new_station.text, self.new_notes.text )
-        self.updatevalues()
+        try:
+            price = float(self.new_cost.text)
+            mileage = float(self.new_mileage.text)
+            gallons = float(self.new_gallons.text)
+            station = self.new_station.text
+            notes   = self.new_notes.text
+            
+            date = datetime.strptime(self.new_date.text, '%m/%d/%Y')
 
-        logger.debug("End of newEntry")
+            self.dv.db.add_entry(date, gallons, mileage, \
+                             price, station, notes)
+            self.updatevalues()
+        except TypeError as te:
+           #Create popup window here detailing correct format
+           logger.exception(f"{te}")
+           return -1
+        except ValueError as ve:
+           #Create popup window here detailing correct format
+           logger.exception(f"{ve}")
+           return -1
 
 
     def updatevalues(self):
         logger.info("Forced update")
-        logger.debug(self)
         self.dv.set_to_stale()
         self.update_display()
 
-
+    
+    def on_stop(self, *args):
+        self.dv.db.save_tree_to_file(True)
+        
+        return super().on_enter(*args)
 
 
 class WindowManager(ScreenManager):
     pass
 
-
-class TopLayout(RelativeLayout):
-	pass
     
 class BasicApp(App):
     logger.info("Starting MPG Desktop Aplication")
@@ -96,11 +107,9 @@ kv = Builder.load_file('topLayout.kv')
 
 sm = WindowManager()
 
-
 screens = [CustomWindow(name="custom"), SummaryWindow(name="summary")]
 for screen in screens:
     sm.add_widget(screen)
-
 sm.current = "summary"
 
 if __name__=="__main__":

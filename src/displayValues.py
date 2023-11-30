@@ -101,8 +101,8 @@ class displayValues():
     
     try:
       return self.overall_mileage/self.overall_gallons 
-    except ZeroDivisionError:
-      logger.exception("Exception occured during 'overall' MPG calculation")
+    except ZeroDivisionError as zde:
+      logger.exception(f"Exception occured during 'overall' MPG calculation {zde}")
       return -1
 
 
