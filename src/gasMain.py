@@ -10,6 +10,7 @@
  R. Gaisey   11/12/23    initial commits 
  R. Gaisey   11/18/23    added logging
  R. Gaisey   11/19/23    add entry MVP
+ R. Gaisey   12/04/23    simplified date input
 
  '''
 from kivy.app import App
@@ -19,7 +20,6 @@ from displayValues import displayValues
 import utilities.cmn_functions as util
 import logging
 import logging.config
-from datetime import datetime
 
 logging.config.fileConfig("logging.conf")
 logger = logging.getLogger()
@@ -64,10 +64,11 @@ class SummaryWindow(Screen):
             gallons = float(self.new_gallons.text)
             station = self.new_station.text
             notes   = self.new_notes.text
-            
-            date = datetime.strptime(self.new_date.text, '%m/%d/%Y')
 
-            self.dv.db.add_entry(date, gallons, mileage, \
+            #Replace with Date validity checking            
+            day = self.new_date.text
+
+            self.dv.db.add_entry(day, gallons, mileage, \
                              price, station, notes)
             self.updatevalues()
         except TypeError as te:

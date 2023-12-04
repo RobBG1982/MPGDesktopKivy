@@ -8,6 +8,7 @@
 
  Name          Date         Issue   
  R. Gaisey   11/29/23    initial commit
+ R. Gaisey   12/04/23    clarified some msg
 
  '''
 
@@ -25,10 +26,10 @@ class Common_Strings():
     correct_fmt_msg = " Correct Input:\n \
                      Date: mm\dd\yyyy (year must be 4 digits)\n \
                      Gallons: xx.xx (decimal number)\n \
-                     Mileage: xx.xx (total mileage as a decimal number)\n \
+                     Mileage: xxxxx.x (total mileage as a decimal number)\n \
                      Cost:    xx.xx (Price of fill up in dollars)\n \
-                     Station: text Gas station\n \
-                     Notes:   text\n"
+                     Station: Gas Station name\n \
+                     Notes:   Any notes\n"
     
     label_title = "MPG Summary"
 
@@ -49,7 +50,7 @@ class Common_Strings():
 
     label_date_ex     = "mm/dd/yyyy"
     label_num_ex1     = "xx.xx"
-    label_num_ex2     = "xxxxx.xx"
+    label_num_ex2     = "xxxxx.x"
     label_station_ex  = "station"
     label_notes_ex    = "notes"
 

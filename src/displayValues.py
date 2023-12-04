@@ -12,6 +12,7 @@
  Name          Date          Issue   
  R. Gaisey   11/12/23    initial commit 
  R. Gaisey   11/18/23    added logging
+ R. Gaisey   12/02/23    converted to use xml tree
  '''
 
 
@@ -61,10 +62,10 @@ class displayValues():
     sum_gallons = 0
     max_index = self.db.get_size() -1
 
-    self.overall_mileage = float(self.db.Entries[max_index][tags.MILEAGE]) - float(self.db.Entries[0][tags.MILEAGE])
-    for entry in self.db.Entries:
-      sum_price   += float(entry[tags.PRICE])    
-      sum_gallons += float(entry[tags.GALLONS])
+    self.overall_mileage = float(self.db.root[max_index][tags.MILEAGE].text) - float(self.db.root[0][tags.MILEAGE].text)
+    for entry in self.db.root:
+      sum_price   += float(entry[tags.PRICE].text)    
+      sum_gallons += float(entry[tags.GALLONS].text)
     
     self.overall_cost = sum_price
     self.overall_gallons = sum_gallons
@@ -78,10 +79,10 @@ class displayValues():
     sum_gallons = 0
     max_index = self.db.get_size() -1
 
-    self.recent_mileage = float(self.db.Entries[max_index][tags.MILEAGE]) - float(self.db.Entries[max_index-10][tags.MILEAGE])
+    self.recent_mileage = float(self.db.root[max_index][tags.MILEAGE].text) - float(self.db.root[max_index-10][tags.MILEAGE].text)
     for x in range(max_index-10, max_index):
-      sum_price   += float(self.db.Entries[x][tags.PRICE])   
-      sum_gallons += float(self.db.Entries[x][tags.GALLONS])
+      sum_price   += float(self.db.root[x][tags.PRICE].text)   
+      sum_gallons += float(self.db.root[x][tags.GALLONS].text)
 
     self.recent_cost = sum_price
     self.recent_gallons = sum_gallons
@@ -112,8 +113,8 @@ class displayValues():
 
     try:
       return self.overall_cost/self.overall_mileage 
-    except ZeroDivisionError:
-      logger.exception("Exception occured during 'overall' CPM calculation")
+    except ZeroDivisionError as zde:
+      logger.exception(f"Exception occured during 'overall' CPM calculation {zde}")
       return -1
 
 
@@ -123,8 +124,8 @@ class displayValues():
 
     try:
       return self.overall_cost/self.overall_gallons 
-    except ZeroDivisionError:
-      logger.exception("Exception occured during 'overall' CPG calculation")
+    except ZeroDivisionError as zde:
+      logger.exception(f"Exception occured during 'overall' CPG calculation {zde}")
       return -1
     
 
@@ -142,8 +143,8 @@ class displayValues():
   
     try:
       return self.recent_mileage/self.recent_gallons 
-    except ZeroDivisionError:
-      logger.exception("Exception occured during 'recent' MPG calculation")
+    except ZeroDivisionError as zde:
+      logger.exception(f"Exception occured during 'recent' MPG calculation {zde}")
       return -1
 
 
@@ -153,8 +154,8 @@ class displayValues():
 
     try:
       return self.recent_cost/self.recent_mileage 
-    except ZeroDivisionError:
-      logger.exception("Exception occured during 'recent' CPM calculation")
+    except ZeroDivisionError as zde:
+      logger.exception(f"Exception occured during 'recent' CPM calculation {zde}")
       return -1
 
 
@@ -164,6 +165,6 @@ class displayValues():
 
     try:
       return self.recent_cost/self.recent_gallons 
-    except ZeroDivisionError:
-      logger.exception("Exception occured during 'recent' CPG calculation")
+    except ZeroDivisionError as zde:
+      logger.exception(f"Exception occured during 'recent' CPG calculation {zde}")
       return -1
