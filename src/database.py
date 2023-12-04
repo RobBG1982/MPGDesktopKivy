@@ -18,7 +18,8 @@ Gas Fillup Entry
  Name          Date       Issue   
  R. Gaisey   11/01/23   initial commit
  R. Gaisey   11/18/23   file save function
-
+ R. Gaisey   12/04/23   xml conversion, updated size func
+              cont.     added xml attribute update
  '''
 
 import datetime
@@ -48,6 +49,8 @@ class DataBase:
 
         self.filename = filename
         self.Entries = []
+        self.tree = None
+        self.root = None
         self.backupFile = "liveBackup.xml"
 
         self.save_xml_to_list(filename)
@@ -64,7 +67,8 @@ class DataBase:
         Returns:
          length(int) - the number of elements in the database
         '''
-        return  len(self.Entries) 
+
+        return  len(self.root) 
          
 
     def save_xml_to_list (self, xmlfile):
@@ -82,9 +86,9 @@ class DataBase:
         self.tree = ET.parse(xmlfile) 
 
         # get root element 
-        root = self.tree.getroot() 
+        self.root = self.tree.getroot() 
 
-        for child in root: 
+        for child in self.root: 
 
             row  = []
             for elements in child:
@@ -103,7 +107,9 @@ class DataBase:
            None
         '''
 
+        ET.indent(self.tree,space="\t", level=0)
         self.tree.write(self.backupFile, encoding="utf-8") 
+
 
         if replace:
             self.tree.write(self.filename, encoding="utf-8") 
@@ -120,10 +126,37 @@ class DataBase:
         Returns:
            None
         '''
-            
-        newID = self.get_new_RecordID
-        row  = [newID, date, gallons, mileage, cost, station, notes]
-        self.Entries.append(row)
+
+        row = ET.SubElement(self.root,'row')
+
+        newElem= ET.SubElement(row,  'RecordID')
+        newElem.text = str(self.get_new_RecordID())
+
+        newElem = ET.SubElement(row,  'DATE')
+        newElem.text = str(date)
+
+        newElem = ET.SubElement(row,  'GALLONS')
+        newElem.text = str(gallons)
+
+        newElem = ET.SubElement(row,  'MILEAGE')
+        newElem.text = str(mileage)
+
+        newElem = ET.SubElement(row,  'PRICE')
+        newElem.text = str(cost)
+
+        newElem = ET.SubElement(row,  'STATION')
+        newElem.text = station
+
+        newElem = ET.SubElement(row,  'NOTES')
+        newElem.text = notes
+
+        self.print_entries()
+
+        self.root.set('count',str(len(self.root)))
+        self.root.set('lastEntry',date)
+        self.root.set('lastUpdated',str(datetime.date.today()))
+        self.save_tree_to_file(False)
+
 
 
     def print_entries(self):
@@ -136,8 +169,7 @@ class DataBase:
            None
         '''
         
-        root = self.tree.getroot() 
-        for child in root: 
+        for child in self.root: 
             for elements in child:
                 print (f' {elements.tag}: {elements.text} ')
 
@@ -158,10 +190,14 @@ class DataBase:
 
         maxRecordID = 0
         for entry in root.findall('row'):
-           currID = int(entry.find('RecordID').text)
-           if currID > maxRecordID: 
-              maxRecordID = currID
+           try:
+             currID = int(entry.find('RecordID').text)
+             if currID > maxRecordID: 
+                 maxRecordID = currID
+           except:
+             return (maxRecordID+1)
 
+       
         return (maxRecordID + 1)
     
 
