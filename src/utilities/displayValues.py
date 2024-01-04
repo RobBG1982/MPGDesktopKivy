@@ -13,11 +13,12 @@
  R. Gaisey   11/12/23    initial commit 
  R. Gaisey   11/18/23    added logging
  R. Gaisey   12/02/23    converted to use xml tree
+ R. Gaisey   12/29/23    updated to include range and estimated mileage values
+ R. Gaisey   01/04/23    refactored project structure
  '''
 
-
-from database import EntryTags as tags
-from database import DataBase
+from utilities.database import EntryTags as tags
+from utilities.database import DataBase
 import logging
 
 logger = logging.getLogger()
@@ -28,7 +29,7 @@ class displayValues():
     logger.info("Initializing database")
 
     self.db = DataBase("utilities/gas_raw.xml")
-    self.db.print_entries()
+    #self.db.print_entries()
 
     self.stale = True
 
@@ -50,6 +51,8 @@ class displayValues():
     logger.debug("Setting all values")
     self.set_overall_values()
     self.set_recent_values()
+    self.set_estimated_values()
+
     self.stale = False
 
     return 
@@ -87,6 +90,36 @@ class displayValues():
     self.recent_cost = sum_price
     self.recent_gallons = sum_gallons
     return 
+
+  def set_estimated_values(self):
+    logger.info("Setting 'estimated' values")
+
+    sum_range   = 0 
+    max_index = self.db.get_size() -1
+
+
+    for x in range(max_index-10, max_index):
+      sum_range   += float(self.db.root[x+1][tags.MILEAGE].text) - float(self.db.root[x][tags.MILEAGE].text)
+
+    self.est_range = sum_range/10
+    self.est_mileage = float(self.db.root[max_index][tags.MILEAGE].text) + self.est_range
+    logger.debug(f"Completed Estimated values, Range: {self.est_range} Current Mileage: {self.db.root[max_index][tags.MILEAGE].text} Next Estimated Fill UP: {self.est_mileage}")
+
+    return 
+
+
+  def get_est_range(self):
+    if self.stale == True:
+      self.set_all_values()
+
+    return self.est_range
+  
+
+  def get_est_mileage(self):
+    if self.stale == True:
+      self.set_all_values()
+
+    return self.est_mileage
 
 
   def get_overall_mileage(self):
@@ -168,3 +201,18 @@ class displayValues():
     except ZeroDivisionError as zde:
       logger.exception(f"Exception occured during 'recent' CPG calculation {zde}")
       return -1
+
+
+'''
+if __name__=="__main__":
+
+  dv = displayValues()
+
+
+  print(f" Estimated Range:  {format_float(dv.get_est_range(), 2)} Mileage {format_float(dv.get_est_mileage(), 2)} \n \
+           Overall Mileage {format_float(dv.get_overall_mileage(), 2)} MPG: {format_float(dv.get_overall_mpg(), 2)} \n \
+           Recent Mileage {format_float(dv.get_recent_mileage(), 2)} MPG: {format_float(dv.get_recent_mpg(), 2)}\n \
+           Completed packet")
+  
+'''
+

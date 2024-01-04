@@ -20,10 +20,12 @@ Gas Fillup Entry
  R. Gaisey   11/18/23   file save function
  R. Gaisey   12/04/23   xml conversion, updated size func
               cont.     added xml attribute update
+ R. Gaisey   12/29/23   commented out print statement
  '''
 
-import datetime
 import xml.etree.ElementTree as ET
+import datetime
+from shutil import copyfile
 from enum import IntEnum
 
 
@@ -51,7 +53,7 @@ class DataBase:
         self.Entries = []
         self.tree = None
         self.root = None
-        self.backupFile = "liveBackup.xml"
+        self.backupFile = "../archive/liveBackup.xml"
 
         self.save_xml_to_list(filename)
         self.save_tree_to_file(False)
@@ -107,14 +109,11 @@ class DataBase:
            None
         '''
 
-        ET.indent(self.tree,space="\t", level=0)
-        self.tree.write(self.backupFile, encoding="utf-8") 
-
+        ET.indent(self.tree, space="\t", level=0)
 
         if replace:
-            self.tree.write(self.filename, encoding="utf-8") 
-            
-
+            copyfile(self.filename, self.backupFile)
+            self.tree.write(self.filename, encoding="utf-8")
 
 
     def add_entry (self, date, gallons, mileage, cost, station, notes):
@@ -150,13 +149,12 @@ class DataBase:
         newElem = ET.SubElement(row,  'NOTES')
         newElem.text = notes
 
-        self.print_entries()
-
         self.root.set('count',str(len(self.root)))
         self.root.set('lastEntry',date)
-        self.root.set('lastUpdated',str(datetime.date.today()))
+        self.root.set('lastUpdated',self.get_date())
         self.save_tree_to_file(False)
 
+        self.print_entries()
 
 
     def print_entries(self):

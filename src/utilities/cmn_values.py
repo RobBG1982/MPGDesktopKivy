@@ -9,6 +9,7 @@
  Name          Date         Issue   
  R. Gaisey   11/29/23    initial commit
  R. Gaisey   12/04/23    clarified some msg
+ R. Gaisey   12/29/23    updated to include range and estimated mileage display
 
  '''
 
@@ -32,6 +33,9 @@ class Common_Strings():
                      Notes:   Any notes\n"
     
     label_title = "MPG Summary"
+
+    label_est_range = "Estimated Range (miles per tank): "
+    label_est_mileage = "Next Fill-up (miles): "
 
     label_overall = "Overall Gas Mileage"
     label_recent  = "Recent Gas Mileage"
@@ -57,6 +61,6 @@ class Common_Strings():
     label_num_ex3     = "99.99"
     label_num_ex4     = "12345.67"
 
-    btn_newentry_text = "  Add New Entry  "
+    btn_new_entry_text = "  Add New Entry  "
     btn_update_text   = "  Update Values "
 

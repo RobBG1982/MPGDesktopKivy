@@ -1,0 +1,17 @@
+2023-12-30 08:42:33,759  INFO   displayValues __init__ Initializing database
+2023-12-30 08:42:33,760  INFO   gasMain BasicApp Starting MPG Desktop Application
+2023-12-30 08:42:34,308  INFO   gasMain update_display Updating Display values
+2023-12-30 08:42:34,308  DEBUG  displayValues set_all_values Setting all values
+2023-12-30 08:42:34,309  INFO   displayValues set_overall_values Setting 'overall' values
+2023-12-30 08:42:34,309  INFO   displayValues set_recent_values Setting 'recent' values
+2023-12-30 08:42:34,309  INFO   displayValues set_estimated_values Setting 'estimated' values
+2023-12-30 08:42:34,309  DEBUG  displayValues set_estimated_values Completed Estimated values, Range: 369.45500000000027 Current Mileage: 94401.8 Next Estimated Fill UP: 94771.255
+2023-12-30 08:42:56,552  INFO   gasMain add_new_entry Adding new entry
+2023-12-30 08:42:56,553  INFO   gasMain update_values Forced update of display values
+2023-12-30 08:42:56,553  DEBUG  displayValues set_to_stale Data set to stale
+2023-12-30 08:42:56,553  INFO   gasMain update_display Updating Display values
+2023-12-30 08:42:56,553  DEBUG  displayValues set_all_values Setting all values
+2023-12-30 08:42:56,553  INFO   displayValues set_overall_values Setting 'overall' values
+2023-12-30 08:42:56,553  INFO   displayValues set_recent_values Setting 'recent' values
+2023-12-30 08:42:56,553  INFO   displayValues set_estimated_values Setting 'estimated' values
+2023-12-30 08:42:56,553  DEBUG  displayValues set_estimated_values Completed Estimated values, Range: 891.8399999999995 Current Mileage: 100000.0 Next Estimated Fill UP: 100891.84

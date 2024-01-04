@@ -1,0 +1,25 @@
+2023-12-29 17:10:22,749  INFO   displayValues __init__ Initializing database
+2023-12-29 17:10:22,751  INFO   gasMain BasicApp Starting MPG Desktop Application
+2023-12-29 17:10:23,294  INFO   gasMain update_display Updating Display values
+2023-12-29 17:10:23,294  DEBUG  displayValues set_all_values Setting all values
+2023-12-29 17:10:23,294  INFO   displayValues set_overall_values Setting 'overall' values
+2023-12-29 17:10:23,294  INFO   displayValues set_recent_values Setting 'recent' values
+2023-12-29 17:10:23,295  INFO   displayValues set_estimated_values Setting 'estimated' values
+2023-12-29 17:10:23,295  DEBUG  displayValues set_estimated_values Completed Estimated values, Range: 369.45500000000027 Current Mileage: 94401.8 Next Estimated Fill UP: 94771.255
+2023-12-29 17:11:00,804  INFO   gasMain addnewentry Adding new entry
+2023-12-29 17:11:00,806  INFO   gasMain updatevalues Forced update
+2023-12-29 17:11:00,806  DEBUG  displayValues set_to_stale Data set to stale
+2023-12-29 17:11:00,807  INFO   gasMain update_display Updating Display values
+2023-12-29 17:11:00,807  DEBUG  displayValues set_all_values Setting all values
+2023-12-29 17:11:00,807  INFO   displayValues set_overall_values Setting 'overall' values
+2023-12-29 17:11:00,807  INFO   displayValues set_recent_values Setting 'recent' values
+2023-12-29 17:11:00,807  INFO   displayValues set_estimated_values Setting 'estimated' values
+2023-12-29 17:11:00,807  DEBUG  displayValues set_estimated_values Completed Estimated values, Range: 891.8399999999995 Current Mileage: 100000.0 Next Estimated Fill UP: 100891.84
+2023-12-29 17:11:31,677  INFO   gasMain updatevalues Forced update
+2023-12-29 17:11:31,677  DEBUG  displayValues set_to_stale Data set to stale
+2023-12-29 17:11:31,677  INFO   gasMain update_display Updating Display values
+2023-12-29 17:11:31,677  DEBUG  displayValues set_all_values Setting all values
+2023-12-29 17:11:31,677  INFO   displayValues set_overall_values Setting 'overall' values
+2023-12-29 17:11:31,677  INFO   displayValues set_recent_values Setting 'recent' values
+2023-12-29 17:11:31,677  INFO   displayValues set_estimated_values Setting 'estimated' values
+2023-12-29 17:11:31,677  DEBUG  displayValues set_estimated_values Completed Estimated values, Range: 891.8399999999995 Current Mileage: 100000.0 Next Estimated Fill UP: 100891.84
