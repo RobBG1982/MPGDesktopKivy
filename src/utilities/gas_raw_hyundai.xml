@@ -1,0 +1,47 @@
+<root count="49" created="04/07/2024" lastUpdated="04/07/2024" lastEntry="03/24/24">
+	<row>
+		<RecordID>1</RecordID>
+		<DATE>02/11/24</DATE>
+		<GALLONS>17.001</GALLONS>
+		<MILEAGE>40164</MILEAGE>
+		<PRICE>56.09</PRICE>
+		<STATION>????</STATION>
+		<NOTES />
+	</row>
+	<row>
+		<RecordID>1</RecordID>
+		<DATE>02/21/24</DATE>
+		<GALLONS>17.009</GALLONS>
+		<MILEAGE>40628</MILEAGE>
+		<PRICE>54.70</PRICE>
+		<STATION>????</STATION>
+		<NOTES />
+	</row>
+	<row>
+		<RecordID>1</RecordID>
+		<DATE>03/02/24</DATE>
+		<GALLONS></GALLONS>
+		<MILEAGE>40628</MILEAGE>
+		<PRICE>54.70</PRICE>
+		<STATION>????</STATION>
+		<NOTES />
+	</row>
+	<row>
+		<RecordID>1</RecordID>
+		<DATE>03/08/24</DATE>
+		<GALLONS>16.980</GALLONS>
+		<MILEAGE>41554</MILEAGE>
+		<PRICE>62.81</PRICE>
+		<STATION>Marathon</STATION>
+		<NOTES />
+	</row>
+	<row>
+		<RecordID>1</RecordID>
+		<DATE>03/24/24</DATE>
+		<GALLONS>15.957</GALLONS>
+		<MILEAGE>42440</MILEAGE>
+		<PRICE>58.23</PRICE>
+		<STATION>?????</STATION>
+		<NOTES />
+	</row>
+</root>
