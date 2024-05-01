@@ -5,29 +5,29 @@
 		<GALLONS>17.001</GALLONS>
 		<MILEAGE>40164</MILEAGE>
 		<PRICE>56.09</PRICE>
-		<STATION>????</STATION>
+		<STATION>Shell</STATION>
 		<NOTES />
 	</row>
 	<row>
-		<RecordID>1</RecordID>
+		<RecordID>2</RecordID>
 		<DATE>02/21/24</DATE>
-		<GALLONS>17.009</GALLONS>
+		<GALLONS>17.099</GALLONS>
 		<MILEAGE>40628</MILEAGE>
 		<PRICE>54.70</PRICE>
-		<STATION>????</STATION>
+		<STATION>Shell</STATION>
 		<NOTES />
 	</row>
 	<row>
-		<RecordID>1</RecordID>
+		<RecordID>3</RecordID>
 		<DATE>03/02/24</DATE>
-		<GALLONS></GALLONS>
-		<MILEAGE>40628</MILEAGE>
-		<PRICE>54.70</PRICE>
-		<STATION>????</STATION>
+		<GALLONS>16.258</GALLONS>
+		<MILEAGE>41078</MILEAGE>
+		<PRICE>56.24</PRICE>
+		<STATION>BP</STATION>
 		<NOTES />
 	</row>
 	<row>
-		<RecordID>1</RecordID>
+		<RecordID>4</RecordID>
 		<DATE>03/08/24</DATE>
 		<GALLONS>16.980</GALLONS>
 		<MILEAGE>41554</MILEAGE>
@@ -36,12 +36,48 @@
 		<NOTES />
 	</row>
 	<row>
-		<RecordID>1</RecordID>
+		<RecordID>5</RecordID>
+		<DATE>03/16/24</DATE>
+		<GALLONS>15.934</GALLONS>
+		<MILEAGE>41994</MILEAGE>
+		<PRICE>58.94</PRICE>
+		<STATION>BP</STATION>
+		<NOTES />
+	</row>
+	<row>
+		<RecordID>6</RecordID>
 		<DATE>03/24/24</DATE>
 		<GALLONS>15.957</GALLONS>
 		<MILEAGE>42440</MILEAGE>
 		<PRICE>58.23</PRICE>
-		<STATION>?????</STATION>
+		<STATION>BP</STATION>
 		<NOTES />
+	</row>
+	<row>
+		<RecordID>7</RecordID>
+		<DATE>04/07/24</DATE>
+		<GALLONS>17.178</GALLONS>
+		<MILEAGE>42927</MILEAGE>
+		<PRICE>55.81</PRICE>
+		<STATION>Shell</STATION>
+		<NOTES />
+	</row>
+	<row>
+		<RecordID>8</RecordID>
+		<DATE>04/18/24</DATE>
+		<GALLONS>16.727</GALLONS>
+		<MILEAGE>43372</MILEAGE>
+		<PRICE>63.55</PRICE>
+		<STATION>ExxonMobil</STATION>
+		<NOTES />
+	</row>
+	<row>
+		<RecordID>9</RecordID>
+		<DATE>04/28/24</DATE>
+		<GALLONS>16.456</GALLONS>
+		<MILEAGE>43832</MILEAGE>
+		<PRICE>56.31</PRICE>
+		<STATION>Marathon</STATION>
+		<NOTES>Gallons estimated</NOTES>
 	</row>
 </root>
