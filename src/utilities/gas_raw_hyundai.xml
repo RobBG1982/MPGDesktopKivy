@@ -80,4 +80,40 @@
 		<STATION>Marathon</STATION>
 		<NOTES>Gallons estimated</NOTES>
 	</row>
+	<row>
+		<RecordID>10</RecordID>
+		<DATE>05/09/24</DATE>
+		<GALLONS>17.038</GALLONS>
+		<MILEAGE>44280</MILEAGE>
+		<PRICE>66.43</PRICE>
+		<STATION>Mobil</STATION>
+		<NOTES></NOTES>
+	</row>
+	<row>
+		<RecordID>11</RecordID>
+		<DATE>05/19/24</DATE>
+		<GALLONS>16.716</GALLONS>
+		<MILEAGE>44753</MILEAGE>
+		<PRICE>51.44</PRICE>
+		<STATION>Kroger</STATION>
+		<NOTES>check this</NOTES>
+	</row>
+	<row>
+		<RecordID>12</RecordID>
+		<DATE>05/30/24</DATE>
+		<GALLONS>16.666</GALLONS>
+		<MILEAGE>45226</MILEAGE>
+		<PRICE>63.31</PRICE>
+		<STATION>Mobil</STATION>
+		<NOTES></NOTES>
+	</row>
+	<row>
+		<RecordID>13</RecordID>
+		<DATE>06/09/24</DATE>
+		<GALLONS>15.763</GALLONS>
+		<MILEAGE>45668</MILEAGE>
+		<PRICE>57.99</PRICE>
+		<STATION>Shell</STATION>
+		<NOTES></NOTES>
+	</row>
 </root>
