@@ -116,4 +116,13 @@
 		<STATION>Shell</STATION>
 		<NOTES></NOTES>
 	</row>
+	<row>
+		<RecordID>14</RecordID>
+		<DATE>06/22/24</DATE>
+		<GALLONS>16.896</GALLONS>
+		<MILEAGE>46148</MILEAGE>
+		<PRICE>60.81</PRICE>
+		<STATION>Shell</STATION>
+		<NOTES></NOTES>
+	</row>
 </root>
