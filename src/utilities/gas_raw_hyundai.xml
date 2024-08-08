@@ -1,4 +1,4 @@
-<root count="49" created="04/07/2024" lastUpdated="07/28/2024" lastEntry="07/28/24">
+<root count="19" created="04/07/2024" lastUpdated="08/07/2024" lastEntry="08/06/24">
 	<row>
 		<RecordID>1</RecordID>
 		<DATE>02/11/24</DATE>
@@ -159,6 +159,15 @@
 		<MILEAGE>48065</MILEAGE>
 		<PRICE>61.75</PRICE>
 		<STATION>Exxon</STATION>
+		<NOTES></NOTES>
+	</row>
+	<row>
+		<RecordID>19</RecordID>
+		<DATE>08/06/24</DATE>
+		<GALLONS>17.444</GALLONS>
+		<MILEAGE>48557</MILEAGE>
+		<PRICE>66.27</PRICE>
+		<STATION>Mobil</STATION>
 		<NOTES></NOTES>
 	</row>
 	<row>
