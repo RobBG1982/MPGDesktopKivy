@@ -1,4 +1,4 @@
-<root count="19" created="04/07/2024" lastUpdated="08/07/2024" lastEntry="08/06/24">
+<root count="22" created="04/07/2024" lastUpdated="09/10/2024" lastEntry="08/06/24">
 	<row>
 		<RecordID>1</RecordID>
 		<DATE>02/11/24</DATE>
@@ -168,6 +168,51 @@
 		<MILEAGE>48557</MILEAGE>
 		<PRICE>66.27</PRICE>
 		<STATION>Mobil</STATION>
+		<NOTES></NOTES>
+	</row>
+	<row>
+		<RecordID>20</RecordID>
+		<DATE>08/18/24</DATE>
+		<GALLONS>17.241</GALLONS>
+		<MILEAGE>49060</MILEAGE>
+		<PRICE>64.64</PRICE>
+		<STATION>Speedway</STATION>
+		<NOTES></NOTES>
+	</row>
+	<row>
+		<RecordID>21</RecordID>
+		<DATE>08/29/24</DATE>
+		<GALLONS>17.310</GALLONS>
+		<MILEAGE>49533</MILEAGE>
+		<PRICE>53.64</PRICE>
+		<STATION>Kroger</STATION>
+		<NOTES></NOTES>
+	</row>
+	<row>
+		<RecordID>22</RecordID>
+		<DATE>09/10/24</DATE>
+		<GALLONS>16.818</GALLONS>
+		<MILEAGE>50034</MILEAGE>
+		<PRICE>58.85</PRICE>
+		<STATION>Mobil</STATION>
+		<NOTES></NOTES>
+	</row>
+	<row>
+		<RecordID>23</RecordID>
+		<DATE>09/23/24</DATE>
+		<GALLONS>16.918</GALLONS>
+		<MILEAGE>50510</MILEAGE>
+		<PRICE>55.81</PRICE>
+		<STATION>Marathon</STATION>
+		<NOTES></NOTES>
+	</row>
+	<row>
+		<RecordID>24</RecordID>
+		<DATE>10/02/2024</DATE>
+		<GALLONS>17.051</GALLONS>
+		<MILEAGE>50973</MILEAGE>
+		<PRICE>57.96</PRICE>
+		<STATION>Shell</STATION>
 		<NOTES></NOTES>
 	</row>
 	<row>
