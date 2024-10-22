@@ -225,6 +225,15 @@
 		<NOTES></NOTES>
 	</row>
 	<row>
+		<RecordID>26</RecordID>
+		<DATE>10/18/2024</DATE>
+		<GALLONS>17.114</GALLONS>
+		<MILEAGE>51981</MILEAGE>
+		<PRICE>59.88</PRICE>
+		<STATION>Mobil</STATION>
+		<NOTES></NOTES>
+	</row>
+	<row>
 		<RecordID>empty</RecordID>
 		<DATE></DATE>
 		<GALLONS></GALLONS>
