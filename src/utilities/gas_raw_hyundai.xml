@@ -1,4 +1,4 @@
-<root count="22" created="04/07/2024" lastUpdated="09/10/2024" lastEntry="08/06/24">
+<root count="31" created="04/07/2024" lastUpdated="12/3/2024" lastEntry="12/02/24">
 	<row>
 		<RecordID>1</RecordID>
 		<DATE>02/11/24</DATE>
@@ -249,6 +249,33 @@
 		<MILEAGE>52933</MILEAGE>
 		<PRICE>48.97</PRICE>
 		<STATION>7-11</STATION>
+		<NOTES></NOTES>
+	</row>
+	<row>
+		<RecordID>29</RecordID>
+		<DATE>11/13/24</DATE>
+		<GALLONS>16.786</GALLONS>
+		<MILEAGE>53402</MILEAGE>
+		<PRICE>50.34</PRICE>
+		<STATION>Marathon</STATION>
+		<NOTES></NOTES>
+	</row>
+	<row>
+		<RecordID>30</RecordID>
+		<DATE>11/22/24</DATE>
+		<GALLONS>17.075</GALLONS>
+		<MILEAGE>53829</MILEAGE>
+		<PRICE>52.92</PRICE>
+		<STATION>Shell</STATION>
+		<NOTES></NOTES>
+	</row>
+	<row>
+		<RecordID>31</RecordID>
+		<DATE>12/2/24</DATE>
+		<GALLONS>16.597</GALLONS>
+		<MILEAGE>54271</MILEAGE>
+		<PRICE>49.77</PRICE>
+		<STATION>Shell</STATION>
 		<NOTES></NOTES>
 	</row>
 	<row>
