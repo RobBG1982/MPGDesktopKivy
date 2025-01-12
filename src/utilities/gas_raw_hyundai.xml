@@ -306,6 +306,24 @@
 		<NOTES></NOTES>
 	</row>
 	<row>
+		<RecordID>35</RecordID>
+		<DATE>12/30/2024</DATE>
+		<GALLONS>16.715</GALLONS>
+		<MILEAGE>56091</MILEAGE>
+		<PRICE>49.29</PRICE>
+		<STATION>Kroger</STATION>
+		<NOTES></NOTES>
+	</row>
+	<row>
+		<RecordID>36</RecordID>
+		<DATE>01/07/2025</DATE>
+		<GALLONS>16.896</GALLONS>
+		<MILEAGE>56554</MILEAGE>
+		<PRICE>54.05</PRICE>
+		<STATION>BP</STATION>
+		<NOTES></NOTES>
+	</row>
+	<row>
 		<RecordID>empty</RecordID>
 		<DATE></DATE>
 		<GALLONS></GALLONS>
