@@ -324,6 +324,33 @@
 		<NOTES></NOTES>
 	</row>
 	<row>
+		<RecordID>37</RecordID>
+		<DATE>01/14/2025</DATE>
+		<GALLONS>16.945</GALLONS>
+		<MILEAGE>57020</MILEAGE>
+		<PRICE>52.17</PRICE>
+		<STATION>Marathon</STATION>
+		<NOTES></NOTES>
+	</row>
+	<row>
+		<RecordID>38</RecordID>
+		<DATE>01/19/2025</DATE>
+		<GALLONS>16.808</GALLONS>
+		<MILEAGE>57490</MILEAGE>
+		<PRICE>55.45</PRICE>
+		<STATION>Mobil</STATION>
+		<NOTES></NOTES>
+	</row>
+	<row>
+		<RecordID>39</RecordID>
+		<DATE>01/28/25</DATE>
+		<GALLONS>16.786</GALLONS>
+		<MILEAGE>57907</MILEAGE>
+		<PRICE>53.70</PRICE>
+		<STATION>Shell</STATION>
+		<NOTES></NOTES>
+	</row>
+	<row>
 		<RecordID>empty</RecordID>
 		<DATE></DATE>
 		<GALLONS></GALLONS>
