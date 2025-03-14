@@ -371,11 +371,11 @@
 	<row>
 		<RecordID>42</RecordID>
 		<DATE>02/17/2025</DATE>
-		<GALLONS>15.525</GALLONS>
-		<MILEAGE>59234</MILEAGE>
+		<GALLONS>16.566</GALLONS>
+		<MILEAGE>59251</MILEAGE>
 		<PRICE>49.68</PRICE>
 		<STATION>Marathon</STATION>
-		<NOTES>gallons and mileage estimated</NOTES>
+		<NOTES></NOTES>
 	</row>
 	<row>
 		<RecordID>43</RecordID>
@@ -402,6 +402,15 @@
 		<MILEAGE>60590</MILEAGE>
 		<PRICE>52.53</PRICE>
 		<STATION>Kroger</STATION>
+		<NOTES></NOTES>
+	</row>
+	<row>
+		<RecordID>46</RecordID>
+		<DATE>03/12/2025</DATE>
+		<GALLONS>16.915</GALLONS>
+		<MILEAGE>61062</MILEAGE>
+		<PRICE>52.42</PRICE>
+		<STATION>Shell</STATION>
 		<NOTES></NOTES>
 	</row>
 </root>
