@@ -421,5 +421,23 @@
 		<PRICE>51.80</PRICE>
 		<STATION>BP</STATION>
 		<NOTES></NOTES>
+	</row>>
+	<row>
+		<RecordID>48</RecordID>
+		<DATE>03/21/2025</DATE>
+		<GALLONS>16.586</GALLONS>
+		<MILEAGE>62011</MILEAGE>
+		<PRICE>54.72</PRICE>
+		<STATION>Marathon</STATION>
+		<NOTES></NOTES>>
+	<row>
+		<RecordID>49</RecordID>
+		<DATE>03/28/2025</DATE>
+		<GALLONS>16.970</GALLONS>
+		<MILEAGE>62449</MILEAGE>
+		<PRICE>54.29</PRICE>
+		<STATION>Exxon</STATION>
+		<NOTES></NOTES>
+	</row>
 	</row>
 </root>
