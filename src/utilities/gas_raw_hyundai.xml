@@ -429,7 +429,8 @@
 		<MILEAGE>62011</MILEAGE>
 		<PRICE>54.72</PRICE>
 		<STATION>Marathon</STATION>
-		<NOTES></NOTES>>
+		<NOTES></NOTES>
+	</row>
 	<row>
 		<RecordID>49</RecordID>
 		<DATE>03/28/2025</DATE>
@@ -439,5 +440,13 @@
 		<STATION>Exxon</STATION>
 		<NOTES></NOTES>
 	</row>
+	<row>
+		<RecordID>50</RecordID>
+		<DATE>04/03/2025</DATE>
+		<GALLONS>17.029</GALLONS>
+		<MILEAGE>62923</MILEAGE>
+		<PRICE>57.88</PRICE>
+		<STATION>BP</STATION>
+		<NOTES></NOTES>
 	</row>
 </root>
