@@ -449,4 +449,31 @@
 		<STATION>BP</STATION>
 		<NOTES></NOTES>
 	</row>
+	<row>
+		<RecordID>51</RecordID>
+		<DATE>04/07/2025</DATE>
+		<GALLONS>17.075</GALLONS>
+		<MILEAGE>63408</MILEAGE>
+		<PRICE>56.33</PRICE>
+		<STATION>BP</STATION>
+		<NOTES></NOTES>
+	</row>
+	<row>
+		<RecordID>52</RecordID>
+		<DATE>04/13/2025</DATE>
+		<GALLONS>16.322</GALLONS>
+		<MILEAGE>63852</MILEAGE>
+		<PRICE>50.58</PRICE>
+		<STATION>Marathon</STATION>
+		<NOTES></NOTES>
+	</row>
+	<row>
+		<RecordID>54</RecordID>
+		<DATE>04/23/2025</DATE>
+		<GALLONS>17.039</GALLONS>
+		<MILEAGE>64313</MILEAGE>
+		<PRICE>49.40</PRICE>
+		<STATION>Shell</STATION>
+		<NOTES></NOTES>
+	</row>
 </root>
