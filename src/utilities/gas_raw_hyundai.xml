@@ -468,12 +468,30 @@
 		<NOTES></NOTES>
 	</row>
 	<row>
-		<RecordID>54</RecordID>
+		<RecordID>53</RecordID>
 		<DATE>04/23/2025</DATE>
 		<GALLONS>17.039</GALLONS>
 		<MILEAGE>64313</MILEAGE>
 		<PRICE>49.40</PRICE>
 		<STATION>Shell</STATION>
+		<NOTES></NOTES>
+	</row>
+	<row>
+		<RecordID>54</RecordID>
+		<DATE>04/30/2025</DATE>
+		<GALLONS>17.182</GALLONS>
+		<MILEAGE>64777</MILEAGE>
+		<PRICE>54.97</PRICE>
+		<STATION>Exxon</STATION>
+		<NOTES></NOTES>
+	</row>
+	<row>
+		<RecordID>55</RecordID>
+		<DATE>05/06/2025</DATE>
+		<GALLONS>17.175</GALLONS>
+		<MILEAGE>65245</MILEAGE>
+		<PRICE>54.94</PRICE>
+		<STATION>Exxon</STATION>
 		<NOTES></NOTES>
 	</row>
 </root>
