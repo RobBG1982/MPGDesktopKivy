@@ -784,12 +784,75 @@
 		<NOTES></NOTES>
 	</row>
 	<row>
-		<RecordID>80</RecordID>
+		<RecordID></RecordID>
 		<DATE>01/05/2026</DATE>
 		<GALLONS>17.135</GALLONS>
 		<MILEAGE>79453</MILEAGE>
 		<PRICE>48.30</PRICE>
 		<STATION>Kroger</STATION>
+		<NOTES></NOTES>
+	</row>
+	<row>
+		<RecordID></RecordID>
+		<DATE>01/16/2026</DATE>
+		<GALLONS>7.444</GALLONS>
+		<MILEAGE>79884</MILEAGE>
+		<PRICE>20.09</PRICE>
+		<STATION>Shell</STATION>
+		<NOTES></NOTES>
+	</row>
+	<row>
+		<RecordID></RecordID>
+		<DATE>01/21/2026</DATE>
+		<GALLONS>16.858</GALLONS>
+		<MILEAGE>80080</MILEAGE>
+		<PRICE>49.21</PRICE>
+		<STATION>Kroger</STATION>
+		<NOTES></NOTES>
+	</row>
+	<row>
+		<RecordID></RecordID>
+		<DATE>01/27/2026</DATE>
+		<SERVICE>Oil Change, engine flush</GALLONS>
+		<MILEAGE>80270</MILEAGE>
+		<PRICE>90.61</PRICE>
+		<STATION>Speed Zone Lube (North Ave)</STATION>
+		<NOTES></NOTES>
+	</row>
+	<row>
+		<RecordID></RecordID>
+		<DATE>02/01/2026</DATE>
+		<GALLONS>16.378</GALLONS>
+		<MILEAGE>80486</MILEAGE>
+		<PRICE>50.76</PRICE>
+		<STATION>Meijer</STATION>
+		<NOTES></NOTES>
+	</row>
+	<row>
+		<RecordID></RecordID>
+		<DATE>2/10/2026</DATE>
+		<GALLONS>17.033</GALLONS>
+		<MILEAGE>80910</MILEAGE>
+		<PRICE>52.79</PRICE>
+		<STATION>Kroger</STATION>
+		<NOTES></NOTES>
+	</row>
+	<row>
+		<RecordID></RecordID>
+		<DATE>2/19/26</DATE>
+		<GALLONS>16.923</GALLONS>
+		<MILEAGE>81379</MILEAGE>
+		<PRICE>51.60</PRICE>
+		<STATION>Speedway</STATION>
+		<NOTES></NOTES>
+	</row>
+	<row>
+		<RecordID></RecordID>
+		<DATE>2/27/2026</DATE>
+		<GALLONS>17.032</GALLONS>
+		<MILEAGE>81821</MILEAGE>
+		<PRICE>49.38</PRICE>
+		<STATION>Marathon</STATION>
 		<NOTES></NOTES>
 	</row>
 </root>
