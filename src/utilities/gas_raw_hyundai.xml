@@ -817,7 +817,7 @@
 		<MILEAGE>80270</MILEAGE>
 		<PRICE>90.61</PRICE>
 		<STATION>Speed Zone Lube (North Ave)</STATION>
-		<NOTES></NOTES>
+		<NOTES>Synthetic blend</NOTES>
 	</row>
 	<row>
 		<RecordID></RecordID>
@@ -855,4 +855,141 @@
 		<STATION>Marathon</STATION>
 		<NOTES></NOTES>
 	</row>
+	<row>
+		<RecordID></RecordID>
+		<DATE>3/05/2026</DATE>
+		<GALLONS>5.884</GALLONS>
+		<MILEAGE>82298</MILEAGE>
+		<PRICE>20</PRICE>
+		<STATION>Kroger</STATION>
+		<NOTES></NOTES>
+	</row>
+	<row>
+		<RecordID></RecordID>
+		<DATE>3/07/2026</DATE>
+		<GALLONS>16.891</GALLONS>
+		<MILEAGE>82453</MILEAGE>
+		<PRICE>62.48</PRICE>
+		<STATION>Pitstop</STATION>
+		<NOTES></NOTES>
+	</row>
+	<row>
+		<RecordID></RecordID>
+		<DATE>3/17/2026</DATE>
+		<GALLONS>17.518</GALLONS>
+		<MILEAGE>82913</MILEAGE>
+		<PRICE>70.05</PRICE>
+		<STATION>Meijer</STATION>
+		<NOTES></NOTES>
+	</row>
+	<row>
+		<RecordID></RecordID>
+		<DATE>04/01/2026</DATE>
+		<SERVICE>Engine Monitoring Logic, Engine knock</SERVICE>
+		<MILEAGE>83221</MILEAGE>
+		<PRICE></PRICE>
+		<STATION>Elder Hyundai</STATION>
+		<NOTES>	TSB 19-01-002h-4(Campaign953)</NOTES>
+	</row>
+	<row>
+		<RecordID></RecordID>
+		<DATE>04/01/2026</DATE>
+		<SERVICE>Rear Brake pads replacement</SERVICE>
+		<MILEAGE>83221</MILEAGE>
+		<PRICE>591.80</PRICE>
+		<STATION>Elder Hyundai</STATION>
+		<NOTES></NOTES>
+	</row>
+	<row>
+		<RecordID></RecordID>
+		<DATE>04/01/2026</DATE>
+		<SERVICE>Spark Plug replacement</SERVICE>
+		<MILEAGE>83221</MILEAGE>
+		<PRICE>346.80</PRICE>
+		<STATION>Elder Hyundai</STATION>
+		<NOTES></NOTES>
+	</row>
+	<row>
+		<RecordID></RecordID>
+		<DATE>04/09/2026</DATE>
+		<GALLONS>2.504</GALLONS>
+		<MILEAGE>83362</MILEAGE>
+		<PRICE>10.01</PRICE>
+		<STATION>Exxon</STATION>
+		<NOTES></NOTES>
+	</row>
+	<row>
+		<RecordID></RecordID>
+		<DATE>04/12/2026</DATE>
+		<GALLONS>17.545</GALLONS>
+		<MILEAGE>83430</MILEAGE>
+		<PRICE>66.30</PRICE>
+		<STATION>Shell</STATION>
+		<NOTES></NOTES>
+	</row>
+	<row>
+		<RecordID></RecordID>
+		<DATE>4/25/2026</DATE>
+		<GALLONS>16.926</GALLONS>
+		<MILEAGE>83885</MILEAGE>
+		<PRICE>69.38</PRICE>
+		<STATION>BP</STATION>
+		<NOTES></NOTES>
+	</row>
+	<row>
+		<RecordID></RecordID>
+		<DATE>5/5/2026</DATE>
+		<GALLONS>16.498</GALLONS>
+		<MILEAGE>84356</MILEAGE>
+		<PRICE>77.52</PRICE>
+		<STATION>Exxon</STATION>
+		<NOTES></NOTES>
+	</row>
+	<row>
+		<RecordID></RecordID>
+		<DATE>5/16/2026</DATE>
+		<GALLONS>16.739</GALLONS>
+		<MILEAGE>84819</MILEAGE>
+		<PRICE>83.68</PRICE>
+		<STATION>BP</STATION>
+		<NOTES></NOTES>
+	</row>
+	<row>
+		<RecordID></RecordID>
+		<DATE>5/26/2026</DATE>
+		<GALLONS>17.606</GALLONS>
+		<MILEAGE>85311</MILEAGE>
+		<PRICE>80.62</PRICE>
+		<STATION>Mobil</STATION>
+		<NOTES></NOTES>
+	</row>
+	<row>
+		<RecordID></RecordID>
+		<DATE>06/03/2026</DATE>
+		<GALLONS>17.371</GALLONS>
+		<MILEAGE>85795</MILEAGE>
+		<PRICE>66.86</PRICE>
+		<STATION>Kroger</STATION>
+		<NOTES></NOTES>
+	</row>
+	<row>
+		<RecordID></RecordID>
+		<DATE>06/21/2026</DATE>
+		<GALLONS>16.951</GALLONS>
+		<MILEAGE>86306</MILEAGE>
+		<PRICE>65.75</PRICE>
+		<STATION></STATION>
+		<NOTES></NOTES>
+	</row>
+	<row>
+		<RecordID></RecordID>
+		<DATE>06/21/2026</DATE>
+		<SERVICE>Oil Change</SERVICE>
+		<SERVICE>Engine Cleaner</SERVICE>
+		<MILEAGE>86360</MILEAGE>
+		<PRICE>105.65</PRICE>
+		<STATION>Uncle Ed's Oil Change</STATION>
+		<NOTES>5W-20 Full Synthetic</NOTES>
+	</row>
+
 </root>
