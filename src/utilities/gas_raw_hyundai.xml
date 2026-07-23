@@ -991,5 +991,23 @@
 		<STATION>Uncle Ed's Oil Change</STATION>
 		<NOTES>5W-20 Full Synthetic</NOTES>
 	</row>
+	<row>
+		<RecordID></RecordID>
+		<DATE>07/04/2026</DATE>
+		<GALLONS>17.508</GALLONS>
+		<MILEAGE>86796</MILEAGE>
+		<PRICE>73.52</PRICE>
+		<STATION>BP</STATION>
+		<NOTES></NOTES>
+	</row>
+	<row>
+		<RecordID></RecordID>
+		<DATE>07/18/2026</DATE>
+		<GALLONS>17.014</GALLONS>
+		<MILEAGE>87290</MILEAGE>
+		<PRICE>76.55</PRICE>
+		<STATION>Mobil</STATION>
+		<NOTES></NOTES>
+	</row>
 
 </root>
